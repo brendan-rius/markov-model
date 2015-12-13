@@ -2,6 +2,10 @@
 
 A stupid example of a hidden Markov Model.
 
+## Requirements
+
++ Python 3
+
 ## Available HMM
 
 ### Text HMM
