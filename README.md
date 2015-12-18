@@ -27,3 +27,5 @@ print(' '.join(hmm.generate_sentence("the", 7)))  # We generate 7 words, startin
 ```
 the very good sort of injustice towards Highbury
 ```
+
+The example test `text.txt` comes from Shakespeare.
