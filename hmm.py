@@ -59,7 +59,7 @@ class HMM:
             if number <= 0:
                 return state
 
-    def probability_of_chain(self, chain: list):
+    def probability_of_chain(self, chain):
         """
         Compute the probability for a given chain of text to occur.
         :param chain: the chain of states as an ordered list
@@ -86,3 +86,17 @@ class HMM:
 
             probability *= row[next_state]
         return probability
+
+    def generate_chain(self, start_state, size):
+        """
+        Generate of probable chain of state, respecting the probabilities in the matrix
+        :param start_state: the starting state of the chain
+        :param size: the size of the chain
+        :return: the chain as an ordered list
+        """
+        chain = [start_state]
+        state = start_state
+        for n in range(0, size):
+            state = self.next_state(state)
+            chain.append(state)
+        return chain

@@ -20,7 +20,7 @@ with open('text.txt', 'r') as file:
     text = file.read()
 hmm = TextHMM(text)  # We create the HMM from the text
 hmm.train()  # We train it
-print(' '.join(hmm.generate_sentence("the", 7)))  # We generate 7 words, starting with "the"
+print(' '.join(hmm.generate_chain("the", 7)))  # We generate 7 words, starting with "the"
 
 ```
 

@@ -1,5 +1,4 @@
 import re
-
 from hmm import HMM
 
 
@@ -30,20 +29,6 @@ class TextHMM(HMM):
         for row in self.matrix.values():
             for state, occurences in row.items():
                 row[state] *= factor
-
-    def generate_sentence(self, first_word, nwords):
-        """
-        Generate a sentence
-        :param first_word: the first word of the sentence, must be present in the text used to train the HMM
-        :param nwords: the number of words to generate
-        :return: a list of words
-        """
-        sentence = [first_word]
-        word = first_word
-        for n in range(0, nwords):
-            word = self.next_state(word)
-            sentence.append(word)
-        return sentence
 
     def _lex(self, text):
         """
