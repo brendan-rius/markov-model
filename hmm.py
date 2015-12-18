@@ -100,3 +100,18 @@ class HMM:
             state = self.next_state(state)
             chain.append(state)
         return chain
+
+    def train(self, chain):
+        """
+        Train the model on an example chain
+        :param chain: the chain of state as an ordered list
+        """
+        # We read the text two words by two words
+        for s1, s2 in zip(chain, chain[1:]):
+            self.matrix[s1][s2] += 1
+
+        # We normalize the matrix, transforming occurrences into probabilities
+        factor = 1.0 / (len(chain) - 1)  # Instead of dividing by the number of words - 1, we use a multiplication
+        for row in self.matrix.values():
+            for state, occurences in row.items():
+                row[state] *= factor
