@@ -13,7 +13,7 @@ A stupid example of a hidden Markov Model.
 Can generate a sentence after having been trained with a text. Code example:
 The sentences will look like english sentences, but will have no meaning.
 
-```
+```python
 from text import TextHMM
 
 with open('text.txt', 'r') as file:
