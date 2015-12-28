@@ -31,3 +31,9 @@ the very good sort of injustice towards Highbury
 ```
 
 The example test `text.txt` comes from Shakespeare.
+
+## Improvements to be made
+
++ Handle not only first order Markov Model but n-th order chains
++ Live training (being able to use the model as we train it, that is being to update the probability matrix after having
+ created it)
