@@ -1,14 +1,16 @@
-# A stupid Hidden Markov Model
+# A stupid Markov Model :)
 
-A stupid example of a hidden Markov Model.
+Markov model playground
 
 ## Requirements
 
 + Python 3
 
-## Available HMM
+## Available Markov Models implementations
 
-### Text HMM
+### Text Markov Model
+
+The time is the order of appearance of tokens (words) in a text, the space is made of the set of words.
 
 Can generate a sentence after having been trained with a text. Code example:
 The sentences will look like english sentences, but will have no meaning.

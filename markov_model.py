@@ -2,9 +2,9 @@ import random
 from collections import Counter
 
 
-class HMM:
+class MarkovModel:
     """
-    A simple hidden Markov model.
+    A simple discrete-time, discrete space first-order Markov model.
     The probability matrix is a square matrix represented this way:
     ```
           +-----+-----+-----+
@@ -32,7 +32,7 @@ class HMM:
 
     def __init__(self, states):
         """
-        Create a hidden markov chain
+        Create a markov chain
         :param states: a set of all the different states
         """
         self.states = states

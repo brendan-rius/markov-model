@@ -1,8 +1,8 @@
 import re
-from hmm import HMM
+from markov_model import MarkovModel
 
 
-class TextHMM(HMM):
+class TextMarkovModel(MarkovModel):
     """
     A HMM that can be trained with a text and that is able to generate sentences from it.
     Here the states are the words in the vocabulary of the text.
