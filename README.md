@@ -1,6 +1,7 @@
 # A stupid Markov Model :)
 
-Markov model playground
+Markov model playground.
+Currently only handles discrete-time, discrete-space, first order Markov chains.
 
 ## Requirements
 
